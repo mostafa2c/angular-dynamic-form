@@ -1,5 +1,3 @@
-# angular-dynamic-form
-
 # DynamicForm
 
 ## Steps to run application
