@@ -11,7 +11,6 @@ export class TextInputComponent implements OnInit {
 
   @Input() meta!: ControlBase;
   @Input() form!: FormGroup;
-  @Input() id!: number;
 
   constructor() { }
 

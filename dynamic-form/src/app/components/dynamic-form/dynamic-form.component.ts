@@ -11,7 +11,6 @@ import { ControlBase } from '../controls/control-base';
 export class DynamicFormComponent implements OnChanges {
   @Input() meta: ControlBase[] = [];
   @Input() data: any = {};
-  @Input() control!: ControlBase;
 
   form!: FormGroup;
   payLoad = '';

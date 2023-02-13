@@ -10,7 +10,7 @@
     ],
     "order": 3
   },
-
+  
   {
     "controlType": "textinput",
     "label":"Full Name",
@@ -18,7 +18,7 @@
     "required": true,
     "type":"text",
     "minLength":3,
-    "order": 1
+    "order": 10
   },
 
   {
