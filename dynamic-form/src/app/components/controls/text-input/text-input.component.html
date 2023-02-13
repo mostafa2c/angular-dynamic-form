@@ -1,0 +1,11 @@
+<div [formGroup]="form">
+  <label for="{{ meta.key }}">{{ meta.label }}</label>
+  <input
+    [formControlName]="meta.key"
+    [id]="meta.key"
+    [type]="meta.type"
+    [minlength]="meta.minLength"
+    [pattern]="meta.pattern"
+    class="form-control"
+  />
+</div>

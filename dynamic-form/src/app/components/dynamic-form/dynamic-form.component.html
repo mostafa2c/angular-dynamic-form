@@ -1,0 +1,36 @@
+<div class="dynamic-form">
+  <div>
+    <label for="role">Select Role</label>
+    <select
+      id="role"
+      name="role"
+      class="form-control"
+      (change)="roleChane($event)"
+      [(ngModel)]="role"
+    >
+      <option value=""></option>
+      <option value="isUser">User</option>
+      <option value="isAdmin">Admin</option>
+    </select>
+  </div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div *ngFor="let control of meta" class="form-row">
+      <app-dynamic-field
+        [control]="control"
+        [form]="form"
+        [role]="role"
+      ></app-dynamic-field>
+    </div>
+
+    <div class="form-row mt-2">
+      <button type="submit" class="btn btn-primary" [disabled]="!form.valid">
+        Save
+      </button>
+    </div>
+  </form>
+
+  <div *ngIf="payLoad" class="form-row mt-2">
+    <strong>Saved the following values</strong><br />{{ payLoad }}
+  </div>
+
+</div>
